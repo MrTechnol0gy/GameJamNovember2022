@@ -23,7 +23,7 @@ public class ArrowMove : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         UI = GameObject.FindGameObjectWithTag(UITag);
         transform.parent = null;
-        tempPos = transform.position.y;
+        tempPos = transform.position.x;
     }
 
     // Update is called once per frame
@@ -35,10 +35,10 @@ public class ArrowMove : MonoBehaviour
 
             transform.Rotate(0, 0, Input.GetAxis("Vertical") * rotation * Time.deltaTime);  //Angle Arrow
 
-            if(transform.position.y > tempPos)
+            if(transform.position.x > tempPos)
             {
-                UI.GetComponent<UIScript>().AddDist(transform.position.y - tempPos);
-                tempPos = transform.position.y;
+                UI.GetComponent<UIScript>().AddDist(transform.position.x - tempPos);
+                tempPos = transform.position.x;
             }
         }
     }

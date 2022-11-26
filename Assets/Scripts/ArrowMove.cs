@@ -9,6 +9,9 @@ public class ArrowMove : MonoBehaviour
     public float rotation;
     public string obstacleTag;
     public string targetTag;
+    public string UITag;
+    public GameObject UI;
+    public float tempPos;
 
     Rigidbody2D rb;
     float angle;
@@ -18,7 +21,9 @@ public class ArrowMove : MonoBehaviour
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        UI = GameObject.FindGameObjectWithTag(UITag);
         transform.parent = null;
+        tempPos = transform.position.x;
     }
 
     // Update is called once per frame
@@ -29,16 +34,23 @@ public class ArrowMove : MonoBehaviour
             transform.position = transform.position + transform.right * speed * Time.deltaTime;     //Move forwards
 
             transform.Rotate(0, 0, Input.GetAxis("Vertical") * rotation * Time.deltaTime);  //Angle Arrow
+
+            if(transform.position.x > tempPos)
+            {
+                UI.GetComponent<UIScript>().AddDist(transform.position.x - tempPos);
+                tempPos = transform.position.x;
+            }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == obstacleTag)
+        if (other.gameObject.tag == obstacleTag)
         {
             canMove = false;
             rb.bodyType = RigidbodyType2D.Static;
         }
     }
+
 
 }

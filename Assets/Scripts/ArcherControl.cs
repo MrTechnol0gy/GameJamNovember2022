@@ -6,9 +6,11 @@ public class ArcherControl : MonoBehaviour
 {
     public GameObject bow;
     public GameObject arrow;
+    public float rotationSpeed;
+    public float maxAngle;
     bool pulled;
     bool fired;
-    bool goingUp;
+    float dir = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +26,21 @@ public class ArcherControl : MonoBehaviour
             pulled = true;
         }
 
-        if (pulled == true && Input.GetAxis("Vertical") == 0 && fired == false)
+        if (pulled == true && fired == false)
         {
-            GameObject.Instantiate(arrow,bow.transform);
-            fired = true;
-            Debug.Log("Fire!");
-        }
+            if (Input.GetAxis("Vertical") == 0)                 //
+            {                                                   //
+                GameObject.Instantiate(arrow, bow.transform);   //  Fire Arrow when release
+                fired = true;                                   //
+                Debug.Log("Fire!");                             //
+            }                                                   //
 
+            if(bow.transform.eulerAngles.z >= maxAngle && bow.transform.eulerAngles.z <= 360 - maxAngle)    //
+            {                                                                                               //  Change direction
+                dir = dir * -1;                                                                             //
+            }                                                                                               //
+
+            bow.transform.RotateAround(gameObject.transform.position, Vector3.forward, rotationSpeed * dir * Time.deltaTime);   //  Rotate Bow
+        }
     }
 }

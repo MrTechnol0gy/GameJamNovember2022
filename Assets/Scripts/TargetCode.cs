@@ -9,14 +9,16 @@ public class TargetCode : MonoBehaviour
     public ParticleSystem explodeParticles;
     public ParticleSystem bloodParticles;
     public int maxDeathThings;
-
+    public Rigidbody2D[] rbs;
+    public int force;
 
     int choice;
     Collider2D col;
+    bool toTriple = false;
 
     private void Awake()
     {
-        col = gameObject.GetComponent<Collider2D>();
+        col = gameObject.GetComponent<BoxCollider2D>();
     }
 
 
@@ -31,13 +33,18 @@ public class TargetCode : MonoBehaviour
 
             }
             */
-            Explode();
+            //Explode();
+            BlobAbout(collision);
         }
     }
 
-    void BlobAbout()
+    void BlobAbout(Collision2D collision)
     {
-
+        foreach (Rigidbody2D rb in rbs)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+        col.isTrigger = true;
     }
 
     void Explode()

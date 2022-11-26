@@ -32,11 +32,12 @@ public class ArrowMove : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == obstacleTag)
         {
             canMove = false;
+            rb.bodyType = RigidbodyType2D.Static;
         }
     }
 

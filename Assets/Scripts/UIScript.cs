@@ -14,6 +14,12 @@ public class UIScript : MonoBehaviour
     public float timer;
     public float dist;
 
+    public void AddTime(float toAdd)
+    {
+        timer += toAdd;
+        timerText.text = timer.ToString("0.0");
+    }
+
     public void AddScore(int toAdd)
     {
         score += toAdd;

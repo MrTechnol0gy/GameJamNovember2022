@@ -225,6 +225,7 @@ MonoBehaviour:
   noTag: Untagged
   levelChunks:
   - {fileID: 6651839712236396422, guid: 24d522fcb0ca4b7428e2abeca92efb75, type: 3}
+  - {fileID: 6651839712236396422, guid: afdfb4033af5f674789529429548a22e, type: 3}
   loadChunkDist: 220
 --- !u!1001 &927387491
 PrefabInstance:

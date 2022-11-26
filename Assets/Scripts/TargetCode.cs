@@ -5,39 +5,65 @@ using UnityEngine;
 public class TargetCode : MonoBehaviour
 {
     public string playerTag;
+    public string obstacleTag;
     public GameObject sprite;
     public ParticleSystem explodeParticles;
     public ParticleSystem bloodParticles;
     public int maxDeathThings;
-
+    public Rigidbody2D[] rbs;
+    public int force;
+    public GameObject spawner1;
+    public GameObject spawner2;
 
     int choice;
-    Collider2D col;
+    BoxCollider2D col;
+    bool toTriple = false;
+    bool alive = true;
 
     private void Awake()
     {
-        col = gameObject.GetComponent<Collider2D>();
+        col = gameObject.GetComponent<BoxCollider2D>();
     }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == playerTag)
+        if (collision.gameObject.tag == playerTag && alive == true)
         {
-            /*
+            
             choice = Random.Range(0,maxDeathThings);
             if(choice == 0)
             {
-
+                BlobAbout();
+            }else if (choice == 1)
+            {
+                Explode();
+            }else if (choice == 2)
+            {
+                Triple();
             }
-            */
-            Explode();
+            
+            alive = false;
+        }
+        else if (collision.gameObject.tag == obstacleTag && toTriple == true)
+        {
+            toTriple = false;
+            GameObject.Instantiate(gameObject, spawner1.transform);
+            spawner1.GetComponentInChildren<TargetCode>().BlobAbout();
+            GameObject.Instantiate(gameObject, spawner2.transform);
+            spawner2.GetComponentInChildren<TargetCode>().BlobAbout();
         }
     }
 
     void BlobAbout()
     {
-
+        alive = false;
+        foreach (Rigidbody2D rb in rbs)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+        col.size = new Vector2(2, 2);
+        bloodParticles.Play();
     }
 
     void Explode()
@@ -49,7 +75,8 @@ public class TargetCode : MonoBehaviour
 
     void Triple()
     {
-
+        toTriple = true;
+        BlobAbout();
     }
 
 

@@ -177,6 +177,15 @@ public class LeaderboardScript : MonoBehaviour
             enterNameObject.SetActive(false);
         }
 
+        if(yourScoreHoldingText != null)
+        {
+            yourScoreHoldingText.text = "ENTER NAME";
+        }
+        if (yourScoreHoldingText != null)
+        {
+            yourScoreHoldingText.text = "ENTER NAME";
+        }
+
     }
 
     void CompareScores()

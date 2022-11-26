@@ -139,27 +139,27 @@ public class LeaderboardScript : MonoBehaviour
         dist9 = PlayerPrefs.GetFloat("dist9", 0);
         dist10 = PlayerPrefs.GetFloat("dist10", 0);
 
-        scoreHolder1 = PlayerPrefs.GetString("scoreHolder1", "");
-        scoreHolder2 = PlayerPrefs.GetString("scoreHolder2", "");
-        scoreHolder3 = PlayerPrefs.GetString("scoreHolder3", "");
-        scoreHolder4 = PlayerPrefs.GetString("scoreHolder4", "");
-        scoreHolder5 = PlayerPrefs.GetString("scoreHolder5", "");
-        scoreHolder6 = PlayerPrefs.GetString("scoreHolder6", "");
-        scoreHolder7 = PlayerPrefs.GetString("scoreHolder7", "");
-        scoreHolder8 = PlayerPrefs.GetString("scoreHolder8", "");
-        scoreHolder9 = PlayerPrefs.GetString("scoreHolder9", "");
-        scoreHolder10 = PlayerPrefs.GetString("scoreHolder10", "");
+        scoreHolder1 = PlayerPrefs.GetString("scoreHolder1", " ");
+        scoreHolder2 = PlayerPrefs.GetString("scoreHolder2", " ");
+        scoreHolder3 = PlayerPrefs.GetString("scoreHolder3", " ");
+        scoreHolder4 = PlayerPrefs.GetString("scoreHolder4", " ");
+        scoreHolder5 = PlayerPrefs.GetString("scoreHolder5", " ");
+        scoreHolder6 = PlayerPrefs.GetString("scoreHolder6", " ");
+        scoreHolder7 = PlayerPrefs.GetString("scoreHolder7", " ");
+        scoreHolder8 = PlayerPrefs.GetString("scoreHolder8", " ");
+        scoreHolder9 = PlayerPrefs.GetString("scoreHolder9", " ");
+        scoreHolder10 = PlayerPrefs.GetString("scoreHolder10", " ");
 
-        distHolder1 = PlayerPrefs.GetString("distHolder1", "");
-        distHolder2 = PlayerPrefs.GetString("distHolder2", "");
-        distHolder3 = PlayerPrefs.GetString("distHolder3", "");
-        distHolder4 = PlayerPrefs.GetString("distHolder4", "");
-        distHolder5 = PlayerPrefs.GetString("distHolder5", "");
-        distHolder6 = PlayerPrefs.GetString("distHolder6", "");
-        distHolder7 = PlayerPrefs.GetString("distHolder7", "");
-        distHolder8 = PlayerPrefs.GetString("distHolder8", "");
-        distHolder9 = PlayerPrefs.GetString("distHolder9", "");
-        distHolder10 = PlayerPrefs.GetString("distHolder10", "");
+        distHolder1 = PlayerPrefs.GetString("distHolder1", " ");
+        distHolder2 = PlayerPrefs.GetString("distHolder2", " ");
+        distHolder3 = PlayerPrefs.GetString("distHolder3", " ");
+        distHolder4 = PlayerPrefs.GetString("distHolder4", " ");
+        distHolder5 = PlayerPrefs.GetString("distHolder5", " ");
+        distHolder6 = PlayerPrefs.GetString("distHolder6", " ");
+        distHolder7 = PlayerPrefs.GetString("distHolder7", " ");
+        distHolder8 = PlayerPrefs.GetString("distHolder8", " ");
+        distHolder9 = PlayerPrefs.GetString("distHolder9", " ");
+        distHolder10 = PlayerPrefs.GetString("distHolder10", " ");
 
         CompareScores();
         DisplayScores();
@@ -185,70 +185,70 @@ public class LeaderboardScript : MonoBehaviour
         if(yourScore >= score10)
         {
             score10 = yourScore;
-            yourScoreHoldingText = score10Text;
+            yourScoreHoldingText = scoreHolder10Text;
         }
         if(yourScore >= score9)
         {
             score10 = score9;
             scoreHolder10 = scoreHolder9;
             score9 = yourScore;
-            yourScoreHoldingText = score9Text;
+            yourScoreHoldingText = scoreHolder9Text;
         }
         if (yourScore >= score8)
         {
             score9 = score8;
             scoreHolder9 = scoreHolder8;
             score8 = yourScore;
-            yourScoreHoldingText = score8Text;
+            yourScoreHoldingText = scoreHolder8Text;
         }
         if (yourScore >= score7)
         {
             score8 = score7;
             scoreHolder8 = scoreHolder7;
             score7 = yourScore;
-            yourScoreHoldingText = score7Text;
+            yourScoreHoldingText = scoreHolder7Text;
         }
         if (yourScore >= score6)
         {
             score7 = score6;
             scoreHolder7 = scoreHolder6;
             score6 = yourScore;
-            yourScoreHoldingText = score6Text;
+            yourScoreHoldingText = scoreHolder6Text;
         }
         if (yourScore >= score5)
         {
             score6 = score5;
             scoreHolder6 = scoreHolder5;
             score5 = yourScore;
-            yourScoreHoldingText = score5Text;
+            yourScoreHoldingText = scoreHolder5Text;
         }
         if (yourScore >= score4)
         {
             score5 = score4;
             scoreHolder5 = scoreHolder4;
             score4 = yourScore;
-            yourScoreHoldingText = score4Text;
+            yourScoreHoldingText = scoreHolder4Text;
         }
         if (yourScore >= score3)
         {
             score4 = score3;
             scoreHolder4 = scoreHolder3;
             score3 = yourScore;
-            yourScoreHoldingText = score3Text;
+            yourScoreHoldingText = scoreHolder3Text;
         }
         if (yourScore >= score2)
         {
             score3 = score2;
             scoreHolder3 = scoreHolder2;
             score2 = yourScore;
-            yourScoreHoldingText = score2Text;
+            yourScoreHoldingText = scoreHolder2Text;
         }
         if (yourScore >= score1)
         {
             score2 = score1;
             scoreHolder2 = scoreHolder1;
             score1 = yourScore;
-            yourScoreHoldingText = score1Text;
+            yourScoreHoldingText = scoreHolder1Text;
         }
     }
     
@@ -283,70 +283,70 @@ public class LeaderboardScript : MonoBehaviour
         if (yourDist >= dist10)
         {
             dist10 = yourDist;
-            yourDistHoldingText = dist10Text;
+            yourDistHoldingText = distHolder10Text;
         }
         if (yourDist >= dist9)
         {
             dist10 = dist9;
             distHolder10 = distHolder9;
             dist9 = yourDist;
-            yourDistHoldingText = dist9Text;
+            yourDistHoldingText = distHolder9Text;
         }
         if (yourDist >= dist8)
         {
             dist9 = dist8;
             distHolder9 = distHolder8;
             dist8 = yourDist;
-            yourDistHoldingText = dist8Text;
+            yourDistHoldingText = distHolder8Text;
         }
         if (yourDist >= dist7)
         {
             dist8 = dist7;
             distHolder8 = distHolder7;
             dist7 = yourDist;
-            yourDistHoldingText = dist7Text;
+            yourDistHoldingText = distHolder7Text;
         }
         if (yourDist >= dist6)
         {
             dist7 = dist6;
             distHolder7 = distHolder6;
             dist6 = yourDist;
-            yourDistHoldingText = dist6Text;
+            yourDistHoldingText = distHolder6Text;
         }
         if (yourDist >= dist5)
         {
             dist6 = dist5;
             distHolder6 = distHolder5;
             dist5 = yourDist;
-            yourDistHoldingText = dist5Text;
+            yourDistHoldingText = distHolder5Text;
         }
         if (yourDist >= dist4)
         {
             dist5 = dist4;
             distHolder5 = distHolder4;
             dist4 = yourDist;
-            yourDistHoldingText = dist4Text;
+            yourDistHoldingText = distHolder4Text;
         }
         if (yourDist >= dist3)
         {
             dist4 = dist3;
             distHolder4 = distHolder3;
             dist3 = yourDist;
-            yourDistHoldingText = dist3Text;
+            yourDistHoldingText = distHolder3Text;
         }
         if (yourDist >= dist2)
         {
             dist3 = dist2;
             distHolder3 = distHolder2;
             dist2 = yourDist;
-            yourDistHoldingText = dist2Text;
+            yourDistHoldingText = distHolder2Text;
         }
         if (yourDist >= dist1)
         {
             dist2 = dist1;
             distHolder2 = distHolder1;
             dist1 = yourDist;
-            yourDistHoldingText = dist1Text;
+            yourDistHoldingText = distHolder1Text;
         }
     }
 
@@ -428,27 +428,27 @@ public class LeaderboardScript : MonoBehaviour
         PlayerPrefs.SetFloat("dist9", dist9);
         PlayerPrefs.SetFloat("dist10", dist10);
 
-        PlayerPrefs.SetString("scoreHolder1", scoreHolder1);
-        PlayerPrefs.SetString("scoreHolder2", scoreHolder2);
-        PlayerPrefs.SetString("scoreHolder3", scoreHolder3);
-        PlayerPrefs.SetString("scoreHolder4", scoreHolder4);
-        PlayerPrefs.SetString("scoreHolder5", scoreHolder5);
-        PlayerPrefs.SetString("scoreHolder6", scoreHolder6);
-        PlayerPrefs.SetString("scoreHolder7", scoreHolder7);
-        PlayerPrefs.SetString("scoreHolder8", scoreHolder8);
-        PlayerPrefs.SetString("scoreHolder9", scoreHolder9);
-        PlayerPrefs.SetString("scoreHolder10", scoreHolder10);
+        PlayerPrefs.SetString("scoreHolder1", scoreHolder1Text.text);
+        PlayerPrefs.SetString("scoreHolder2", scoreHolder2Text.text);
+        PlayerPrefs.SetString("scoreHolder3", scoreHolder3Text.text);
+        PlayerPrefs.SetString("scoreHolder4", scoreHolder4Text.text);
+        PlayerPrefs.SetString("scoreHolder5", scoreHolder5Text.text);
+        PlayerPrefs.SetString("scoreHolder6", scoreHolder6Text.text);
+        PlayerPrefs.SetString("scoreHolder7", scoreHolder7Text.text);
+        PlayerPrefs.SetString("scoreHolder8", scoreHolder8Text.text);
+        PlayerPrefs.SetString("scoreHolder9", scoreHolder9Text.text);
+        PlayerPrefs.SetString("scoreHolder10", scoreHolder10Text.text);
 
-        PlayerPrefs.SetString("distHolder1", distHolder1);
-        PlayerPrefs.SetString("distHolder2", distHolder2);
-        PlayerPrefs.SetString("distHolder3", distHolder3);
-        PlayerPrefs.SetString("distHolder4", distHolder4);
-        PlayerPrefs.SetString("distHolder5", distHolder5);
-        PlayerPrefs.SetString("distHolder6", distHolder6);
-        PlayerPrefs.SetString("distHolder7", distHolder7);
-        PlayerPrefs.SetString("distHolder8", distHolder8);
-        PlayerPrefs.SetString("distHolder9", distHolder9);
-        PlayerPrefs.SetString("distHolder10", distHolder10);
+        PlayerPrefs.SetString("distHolder1", distHolder1Text.text);
+        PlayerPrefs.SetString("distHolder2", distHolder2Text.text);
+        PlayerPrefs.SetString("distHolder3", distHolder3Text.text);
+        PlayerPrefs.SetString("distHolder4", distHolder4Text.text);
+        PlayerPrefs.SetString("distHolder5", distHolder5Text.text);
+        PlayerPrefs.SetString("distHolder6", distHolder6Text.text);
+        PlayerPrefs.SetString("distHolder7", distHolder7Text.text);
+        PlayerPrefs.SetString("distHolder8", distHolder8Text.text);
+        PlayerPrefs.SetString("distHolder9", distHolder9Text.text);
+        PlayerPrefs.SetString("distHolder10", distHolder10Text.text);
 
         nameInput.gameObject.SetActive(false);
         enterNameObject.SetActive(false);

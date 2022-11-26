@@ -1079,7 +1079,7 @@ MonoBehaviour:
   - {fileID: 1815489003}
   spawner1: {fileID: 1804370129}
   spawner2: {fileID: 804403323}
-  value: 0
+  value: 1
   UI: {fileID: 0}
 --- !u!50 &2332525343319451539
 Rigidbody2D:

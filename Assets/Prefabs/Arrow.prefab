@@ -104,7 +104,9 @@ MonoBehaviour:
   obstacleTag: Obstacle
   targetTag: Target
   UITag: UI
+  gameControllerTag: GameController
   UI: {fileID: 0}
+  gameController: {fileID: 0}
   tempPos: 0
 --- !u!50 &8237951695934744525
 Rigidbody2D:

@@ -6,6 +6,7 @@ public class TargetCode : MonoBehaviour
 {
     public string playerTag;
     public string obstacleTag;
+    public string UITag;
     public GameObject sprite;
     public ParticleSystem explodeParticles;
     public ParticleSystem bloodParticles;
@@ -24,6 +25,7 @@ public class TargetCode : MonoBehaviour
     private void Awake()
     {
         col = gameObject.GetComponent<BoxCollider2D>();
+        UI = GameObject.FindGameObjectWithTag(UITag);
     }
 
 

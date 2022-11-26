@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Target
   - UI
+  - AddTime
+  - ChunkSpawner
   layers:
   - Default
   - TransparentFX

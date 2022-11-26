@@ -184,4 +184,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bow: {fileID: 374712339243158405}
   arrow: {fileID: 8237951695934744512, guid: b4595474e588adf4a9c64ea87675d628, type: 3}
-  maxAngle: 0
+  rotationSpeed: 45
+  maxAngle: 60

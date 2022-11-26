@@ -7,9 +7,12 @@ public class ArrowMove : MonoBehaviour
 
     public float speed;
     public float rotation;
+    public string obstacleTag;
+    public string targetTag;
 
     Rigidbody2D rb;
     float angle;
+    bool canMove = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -21,8 +24,20 @@ public class ArrowMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + transform.right * speed * Time.deltaTime;     //Move forwards
+        if (canMove)
+        {
+            transform.position = transform.position + transform.right * speed * Time.deltaTime;     //Move forwards
 
-        transform.Rotate(0, 0, Input.GetAxis("Vertical") * rotation * Time.deltaTime);  //Angle Arrow
+            transform.Rotate(0, 0, Input.GetAxis("Vertical") * rotation * Time.deltaTime);  //Angle Arrow
+        }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == obstacleTag)
+        {
+            canMove = false;
+        }
+    }
+
 }

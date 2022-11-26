@@ -32,7 +32,6 @@ public class ArcherControl : MonoBehaviour
             {                                                   //
                 GameObject.Instantiate(arrow, bow.transform);   //  Fire Arrow when release
                 fired = true;                                   //
-                Debug.Log("Fire!");                             //
             }                                                   //
 
             if(bow.transform.eulerAngles.z >= maxAngle && bow.transform.eulerAngles.z <= 360 - maxAngle)    //

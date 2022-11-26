@@ -11,9 +11,10 @@ public class TargetCode : MonoBehaviour
     public ParticleSystem bloodParticles;
     public int maxDeathThings;
     public Rigidbody2D[] rbs;
-    public int force;
     public GameObject spawner1;
     public GameObject spawner2;
+    public int value;
+    public GameObject UI;
 
     int choice;
     BoxCollider2D col;
@@ -28,30 +29,40 @@ public class TargetCode : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == playerTag && alive == true)
-        {
-            
-            choice = Random.Range(0,maxDeathThings);
-            if(choice == 0)
-            {
-                BlobAbout();
-            }else if (choice == 1)
-            {
-                Explode();
-            }else if (choice == 2)
-            {
-                Triple();
-            }
-            
-            alive = false;
-        }
-        else if (collision.gameObject.tag == obstacleTag && toTriple == true)
+        
+        if (collision.gameObject.tag == obstacleTag && toTriple == true)
         {
             toTriple = false;
             GameObject.Instantiate(gameObject, spawner1.transform);
             spawner1.GetComponentInChildren<TargetCode>().BlobAbout();
             GameObject.Instantiate(gameObject, spawner2.transform);
             spawner2.GetComponentInChildren<TargetCode>().BlobAbout();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == playerTag && alive == true)
+        {
+
+            choice = Random.Range(0, maxDeathThings);
+            if (choice == 0)
+            {
+                BlobAbout();
+            }
+            else if (choice == 1)
+            {
+                Explode();
+            }
+            else if (choice == 2)
+            {
+                Triple();
+            }
+
+            alive = false;
+
+            UI.GetComponent<UIScript>().AddScore(value);
+
         }
     }
 

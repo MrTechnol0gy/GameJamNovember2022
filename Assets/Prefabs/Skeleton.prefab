@@ -1076,9 +1076,10 @@ MonoBehaviour:
   - {fileID: 1036045669}
   - {fileID: 1197967830}
   - {fileID: 1815489003}
-  force: 1000
   spawner1: {fileID: 1804370129}
   spawner2: {fileID: 804403323}
+  value: 1
+  UI: {fileID: 0}
 --- !u!50 &2332525343319451539
 Rigidbody2D:
   serializedVersion: 4

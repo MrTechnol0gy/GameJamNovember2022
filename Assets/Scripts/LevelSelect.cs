@@ -19,7 +19,7 @@ public class LevelSelect : MonoBehaviour
     
     public void OpenScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("lvl" + level.ToString());
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level" + level.ToString());
     }
     public void LevelSelector()
     {

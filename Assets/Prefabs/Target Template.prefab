@@ -1063,6 +1063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   obstacleTag: Obstacle
+  UITag: UI
   sprite: {fileID: 2332525344084999373}
   explodeParticles: {fileID: 2332525344124452936}
   bloodParticles: {fileID: 2332525343935556173}
@@ -1076,9 +1077,10 @@ MonoBehaviour:
   - {fileID: 1036045669}
   - {fileID: 1197967830}
   - {fileID: 1815489003}
-  force: 1000
   spawner1: {fileID: 1804370129}
   spawner2: {fileID: 804403323}
+  value: 0
+  UI: {fileID: 0}
 --- !u!50 &2332525343319451539
 Rigidbody2D:
   serializedVersion: 4

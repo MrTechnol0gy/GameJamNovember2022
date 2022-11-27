@@ -13,9 +13,11 @@ public class CameraCode : MonoBehaviour
     public float loadChunkDist;
 
     GameObject chunkSpawner;
+    float startPosX;
 
     private void Start()
     {
+        startPosX = transform.position.x;
         chunkSpawner = GameObject.FindGameObjectWithTag(chunkSpawnTag);
     }
 
@@ -26,7 +28,7 @@ public class CameraCode : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag(playerTag);
         }
-        else
+        else if (player.transform.position.x > startPosX)
         {
             transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
         }

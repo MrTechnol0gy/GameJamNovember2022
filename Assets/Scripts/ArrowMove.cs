@@ -15,6 +15,7 @@ public class ArrowMove : MonoBehaviour
     public GameObject gameController;
     public float tempPos;
 
+    AudioSource aud;
     Rigidbody2D rb;
     float angle;
     bool canMove = true;
@@ -27,6 +28,7 @@ public class ArrowMove : MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag(gameControllerTag);
         transform.parent = null;
         tempPos = transform.position.x;
+        aud = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,6 +46,10 @@ public class ArrowMove : MonoBehaviour
                 tempPos = transform.position.x;
             }
         }
+        else if(aud.isPlaying == false)
+        {
+            gameController.GetComponent<ScoreContainerScript>().EndLevel();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -52,7 +58,7 @@ public class ArrowMove : MonoBehaviour
         {
             canMove = false;
             rb.bodyType = RigidbodyType2D.Static;
-            gameController.GetComponent<ScoreContainerScript>().EndLevel();
+            aud.Play();
         }
     }
 

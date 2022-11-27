@@ -71,6 +71,8 @@ public class TargetCode : MonoBehaviour
             }
             else if (choice == 1)
             {
+                aud.clip = exploClip;
+                aud.Play();
                 Explode();
             }
             else if (choice == 2)

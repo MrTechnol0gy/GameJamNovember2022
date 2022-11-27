@@ -8,10 +8,11 @@ public class TimePickUp : MonoBehaviour
     public string UITag;
     public float value;
     public GameObject UI;
+    AudioSource aud;
 
     private void Awake()
     {
-
+        aud = GetComponent<AudioSource>();
         UI = GameObject.FindGameObjectWithTag(UITag);
     }
 

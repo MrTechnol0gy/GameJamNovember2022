@@ -225,8 +225,11 @@ MonoBehaviour:
   chunkSpawnTag: ChunkSpawner
   noTag: Untagged
   levelChunks:
-  - {fileID: 6651839712236396422, guid: 24d522fcb0ca4b7428e2abeca92efb75, type: 3}
-  - {fileID: 6651839712236396422, guid: afdfb4033af5f674789529429548a22e, type: 3}
+  - {fileID: 6651839712236396422, guid: 21dee2487a817084584af0a6c43550d5, type: 3}
+  - {fileID: 6651839712236396422, guid: d53cae8a973fd0047bf8d2c8238a0a7e, type: 3}
+  - {fileID: 6651839712236396422, guid: 06a1a23a067ad2c4aa4381f42e818416, type: 3}
+  - {fileID: 6651839712236396422, guid: 8a9b23f65b3961245b57c538d9323369, type: 3}
+  - {fileID: 6651839712236396422, guid: 4d1f282041312d742a1bcd9e1de7efbe, type: 3}
   loadChunkDist: 220
 --- !u!82 &878597522
 AudioSource:

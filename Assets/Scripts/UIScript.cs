@@ -10,6 +10,7 @@ public class UIScript : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI distText;
     public GameObject scoreKeeper;
+    AudioSource aud;
 
     public int score;
     public float timer;
@@ -17,6 +18,8 @@ public class UIScript : MonoBehaviour
 
     public void AddTime(float toAdd)
     {
+        aud = GetComponent<AudioSource>();
+        aud.Play();
         timer += toAdd;
         timerText.text = timer.ToString("0.0");
     }

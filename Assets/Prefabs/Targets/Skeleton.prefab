@@ -1062,6 +1062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8ee239a1421034d8c215d54491fd61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canFly: 0
+  speed: 0
   playerTag: Player
   obstacleTag: Obstacle
   UITag: UI
@@ -1088,7 +1090,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0bf9d31973bd9224bbd65575f3405773, type: 3}
   - {fileID: 8300000, guid: bd71c6c0e47d6e34882e25d84cc30d36, type: 3}
   - {fileID: 8300000, guid: ad81b5ba674a0fd4a93f469751f3d8c0, type: 3}
-  exploClip: {fileID: 0}
+  exploClip: {fileID: 8300000, guid: 427081c55703ac749892aa3f8300269d, type: 3}
 --- !u!50 &2332525343319451539
 Rigidbody2D:
   serializedVersion: 4

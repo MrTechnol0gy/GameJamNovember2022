@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8237951695934744513}
   - component: {fileID: 8237951695934744525}
   - component: {fileID: 5733227715448683762}
-  - component: {fileID: 2063286582625629039}
+  - component: {fileID: -2288151228496227202}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Player
@@ -156,7 +156,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.5, y: 2.7}
   m_EdgeRadius: 0
---- !u!82 &2063286582625629039
+--- !u!82 &-2288151228496227202
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,7 +167,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7573049bddb54d742b50c6d40f2d1cbe, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -28,6 +28,8 @@ public class TargetCode : MonoBehaviour
     public AudioClip[] clips;
     public AudioClip exploClip;
 
+    float despawnTime = 5;
+
     private void Awake()
     {
         col = gameObject.GetComponent<BoxCollider2D>();
@@ -41,6 +43,14 @@ public class TargetCode : MonoBehaviour
         if (canFly && alive)
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+        }
+        if (alive == false)
+        {
+            despawnTime -= Time.deltaTime;
+        }
+        if(despawnTime <= 0)
+        {
+            GameObject.Destroy(gameObject);
         }
     }
 

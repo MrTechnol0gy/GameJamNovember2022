@@ -38,7 +38,7 @@ public class TargetCode : MonoBehaviour
 
     private void Update()
     {
-        if (canFly)
+        if (canFly && alive)
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
         }

@@ -8,6 +8,7 @@ public class SceneManager : MonoBehaviour
     public string mainMenu = "Main Menu";
     public string levelSelect = "Level Select";
     public string credits = "Credits";
+    public string howToPlay = "How To Play";
 
     public void GoToMainMenu()
     {
@@ -29,6 +30,11 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(credits);
         Debug.Log("This loads the credits.");
+    }
+    public void GoToHowToPlay()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(howToPlay);
+        Debug.Log("This loads the how to play scene.");
     }
     public void ExitGame()
     {

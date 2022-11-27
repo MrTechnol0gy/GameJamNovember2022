@@ -181,9 +181,9 @@ public class LeaderboardScript : MonoBehaviour
         {
             yourScoreHoldingText.text = "ENTER NAME";
         }
-        if (yourScoreHoldingText != null)
+        if (yourDistHoldingText != null)
         {
-            yourScoreHoldingText.text = "ENTER NAME";
+            yourDistHoldingText.text = "ENTER NAME";
         }
 
     }

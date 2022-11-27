@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TargetCode : MonoBehaviour
 {
+    public bool canFly;
+    public float speed;
     public string playerTag;
     public string obstacleTag;
     public string UITag;
@@ -22,12 +24,35 @@ public class TargetCode : MonoBehaviour
     bool toTriple = false;
     bool alive = true;
 
+    AudioSource aud;
+    public AudioClip[] clips;
+    public AudioClip exploClip;
+
+    float despawnTime = 5;
+
     private void Awake()
     {
         col = gameObject.GetComponent<BoxCollider2D>();
         UI = GameObject.FindGameObjectWithTag(UITag);
+        aud = gameObject.GetComponent<AudioSource>();
     }
 
+
+    private void Update()
+    {
+        if (canFly && alive)
+        {
+            transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+        }
+        if (alive == false)
+        {
+            despawnTime -= Time.deltaTime;
+        }
+        if(despawnTime <= 0)
+        {
+            GameObject.Destroy(gameObject);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -50,14 +75,20 @@ public class TargetCode : MonoBehaviour
             choice = Random.Range(0, maxDeathThings);
             if (choice == 0)
             {
+                aud.clip = clips[Random.Range(0, clips.Length)];
+                aud.Play();
                 BlobAbout();
             }
             else if (choice == 1)
             {
+                aud.clip = exploClip;
+                aud.Play();
                 Explode();
             }
             else if (choice == 2)
             {
+                aud.clip = clips[Random.Range(0, clips.Length)];
+                aud.Play();
                 Triple();
             }
 

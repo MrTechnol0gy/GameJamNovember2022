@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8968212405291806430}
   - component: {fileID: 8968212405291806431}
   - component: {fileID: 8968212405291806425}
-  - component: {fileID: -1895965768015742815}
+  - component: {fileID: 5435087227954029037}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Obstacle
@@ -107,8 +107,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-1895965768015742815
-BoxCollider2D:
+--- !u!60 &5435087227954029037
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -120,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: -1.8}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,6 +130,35 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7, y: 6.6}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.3999999, y: -2.86}
+      - {x: 2.26, y: -2.08}
+      - {x: 2.24, y: -2.06}
+      - {x: 2.1, y: -1.4399999}
+      - {x: 2.08, y: -1.42}
+      - {x: 1.9399999, y: -0.96}
+      - {x: 1.92, y: -0.94}
+      - {x: 1.78, y: -0.16}
+      - {x: 1.6195633, y: 0.16330102}
+      - {x: 1.4793662, y: 0.3697698}
+      - {x: 1.3047265, y: 0.82899225}
+      - {x: 1.0178386, y: 1.1616292}
+      - {x: 0.8777516, y: 1.3404182}
+      - {x: 0.73455304, y: 1.5481853}
+      - {x: 0.0492794, y: 1.7653034}
+      - {x: -0.66384757, y: 1.6421046}
+      - {x: -1.4099283, y: 1.4134586}
+      - {x: -2.2020032, y: 1.3465858}
+      - {x: -2.2004905, y: 1.3217874}
+      - {x: -2.2089775, y: 1.3341079}
+      - {x: -2.2336173, y: 1.3214408}
+      - {x: -2.28, y: 1.29}
+      - {x: -2.85, y: 0.58}
+      - {x: -3.6299999, y: -1.1}
+      - {x: -4.02, y: -3.84}
+      - {x: -4.02, y: -5.12}
+      - {x: 2.8999999, y: -5.12}
+      - {x: 2.8999999, y: -3.84}
+      - {x: 2.8799999, y: -3.82}
+      - {x: 2.4199998, y: -2.8799999}

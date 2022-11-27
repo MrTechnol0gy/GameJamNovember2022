@@ -9,6 +9,7 @@ public class UIScript : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI distText;
+    public GameObject scoreKeeper;
 
     public int score;
     public float timer;
@@ -36,6 +37,10 @@ public class UIScript : MonoBehaviour
     {
         timer -= Time.deltaTime;
         timerText.text = timer.ToString("0.0");
+        if (timer <= 0)
+        {
+            scoreKeeper.GetComponent<ScoreContainerScript>().EndLevel();
+        }
     }
 
 }

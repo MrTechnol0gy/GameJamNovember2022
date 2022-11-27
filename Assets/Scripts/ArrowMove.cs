@@ -10,7 +10,9 @@ public class ArrowMove : MonoBehaviour
     public string obstacleTag;
     public string targetTag;
     public string UITag;
+    public string gameControllerTag;
     public GameObject UI;
+    public GameObject gameController;
     public float tempPos;
 
     Rigidbody2D rb;
@@ -22,6 +24,7 @@ public class ArrowMove : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         UI = GameObject.FindGameObjectWithTag(UITag);
+        gameController = GameObject.FindGameObjectWithTag(gameControllerTag);
         transform.parent = null;
         tempPos = transform.position.x;
     }
@@ -49,6 +52,7 @@ public class ArrowMove : MonoBehaviour
         {
             canMove = false;
             rb.bodyType = RigidbodyType2D.Static;
+            gameController.GetComponent<ScoreContainerScript>().EndLevel();
         }
     }
 

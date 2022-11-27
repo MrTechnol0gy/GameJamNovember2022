@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 9ee76f7de56340240b5468be369d0c8a
   - enabled: 1
-    path: Assets/Scenes/Ryan Testing Scene.unity
-    guid: fcc587d1767eda8469406924a3183a0d
-  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 7ccd22a0abc41a1449032fd0a4c7575a
   - enabled: 1
@@ -20,7 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 51963549a595fdf4595c35986275d298
-  - enabled: 1
-    path: Assets/Scenes/Leaderboard.unity
-    guid: 9485ec4c06600dd40a79a0494b235930
   m_configObjects: {}

@@ -22,10 +22,15 @@ public class TargetCode : MonoBehaviour
     bool toTriple = false;
     bool alive = true;
 
+    AudioSource aud;
+    public AudioClip[] clips;
+    public AudioClip exploClip;
+
     private void Awake()
     {
         col = gameObject.GetComponent<BoxCollider2D>();
         UI = GameObject.FindGameObjectWithTag(UITag);
+        aud = gameObject.GetComponent<AudioSource>();
     }
 
 
@@ -50,6 +55,8 @@ public class TargetCode : MonoBehaviour
             choice = Random.Range(0, maxDeathThings);
             if (choice == 0)
             {
+                aud.clip = clips[Random.Range(0, clips.Length)];
+                aud.Play();
                 BlobAbout();
             }
             else if (choice == 1)
@@ -58,6 +65,8 @@ public class TargetCode : MonoBehaviour
             }
             else if (choice == 2)
             {
+                aud.clip = clips[Random.Range(0, clips.Length)];
+                aud.Play();
                 Triple();
             }
 

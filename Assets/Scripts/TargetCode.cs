@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TargetCode : MonoBehaviour
 {
+    public bool canFly;
+    public float speed;
     public string playerTag;
     public string obstacleTag;
     public string UITag;
@@ -33,6 +35,14 @@ public class TargetCode : MonoBehaviour
         aud = gameObject.GetComponent<AudioSource>();
     }
 
+
+    private void Update()
+    {
+        if (canFly)
+        {
+            transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
